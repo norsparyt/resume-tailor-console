@@ -1,0 +1,134 @@
+%-------------------------------------------------------------
+% Sample base resume (placeholder content).
+% Replace it from the "Base Resume" page with your own .tex file.
+% Layout adapted from the widely used "Jake's Resume" template (MIT).
+%-------------------------------------------------------------
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Your Name} \\ \vspace{1pt}
+    \small +91-98765-43210 $|$ \href{mailto:you@example.com}{\underline{you@example.com}} $|$
+    \href{https://linkedin.com/in/yourname}{\underline{linkedin.com/in/yourname}} $|$
+    \href{https://github.com/yourname}{\underline{github.com/yourname}} $|$ Bengaluru, India
+\end{center}
+
+\section{Summary}
+\small{Backend engineer with 4 years of experience building Python and Java services for fintech products. Shipped payment and reconciliation systems used by over 2 million customers, with a focus on reliability and clean APIs.}
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Java, SQL, JavaScript} \\
+     \textbf{Frameworks}{: Django, FastAPI, Spring Boot, React} \\
+     \textbf{Data \& Cloud}{: PostgreSQL, Redis, Kafka, AWS (EC2, S3, Lambda), Docker} \\
+     \textbf{Practices}{: REST APIs, Microservices, CI/CD with GitHub Actions, Unit Testing}
+    }}
+ \end{itemize}
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Engineer II}{Jan 2023 -- Present}
+      {PayQuick Technologies}{Bengaluru}
+      \resumeItemListStart
+        \resumeItem{Built a reconciliation service in Python and Kafka that matches 1.5 million UPI transactions a day, cutting manual review effort by 60\%}
+        \resumeItem{Designed REST APIs in FastAPI for the merchant dashboard and documented them with OpenAPI}
+        \resumeItem{Moved three legacy cron jobs to AWS Lambda, reducing monthly infrastructure cost by 25\%}
+        \resumeItem{Mentored two junior engineers and ran weekly code reviews for the payments team}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Engineer}{Jul 2021 -- Dec 2022}
+      {Finlytics Solutions}{Pune}
+      \resumeItemListStart
+        \resumeItem{Developed loan-servicing microservices in Java and Spring Boot backed by PostgreSQL}
+        \resumeItem{Added Redis caching to the credit-score lookup, bringing p95 latency down from 800 ms to 120 ms}
+        \resumeItem{Set up GitHub Actions pipelines with automated tests and Docker image builds}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{ExpenseSplit} $|$ \emph{React, Django, PostgreSQL}}{2022}
+          \resumeItemListStart
+            \resumeItem{Built a group expense-splitting web app with settlement suggestions, used by 300 friends and colleagues}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Log Insights CLI} $|$ \emph{Python}}{2021}
+          \resumeItemListStart
+            \resumeItem{Wrote an open-source CLI that summarises application logs and flags error spikes; 150 GitHub stars}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Institute of Technology, Trichy}{2017 -- 2021}
+      {B.Tech in Computer Science and Engineering, CGPA 8.4/10}{Tiruchirappalli}
+  \resumeSubHeadingListEnd
+
+\section{Certifications}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading{\textbf{AWS Certified Developer -- Associate}}{2023}
+  \resumeSubHeadingListEnd
+
+\end{document}

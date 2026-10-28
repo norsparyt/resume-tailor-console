@@ -1,0 +1,12 @@
+# Runs the backend (with LaTeX preinstalled). Run the frontend with npm, see README.
+services:
+  backend:
+    build: ./backend
+    env_file:
+      # Optional: every setting has a default and no API key is needed.
+      - path: ./backend/.env
+        required: false
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/data:/data
